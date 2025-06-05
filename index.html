@@ -1,79 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krishna Neupane</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="kricon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="top-container">
-      <img class="top-cloud" src="images/cloud.png" alt="cloud-img" />
-      <h1>I'm Krishna</h1>
-      <h2 class="intro">A Web Developer</h2>
-      <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img" />
-      <img class="mountain" src="images/mountain.png" alt="mountain-img" />
-    </div>
-    <div class="middle-container">
-      <div class="profile">
-        <img src="images/krishna.png" alt="myprofile" />
-        <h2>Hello.</h2>
-        <p class="intro-paragraph">
-          I am BCA graduate and a teacher at Ratna Rajya S.S aspiring to be a web
-          developer. I ❤️ travelling and listening to music sometimes.
-        </p>
-      </div>
-      <hr />
-      <div class="skills">
-        <h2>My Skills.</h2>
-        <div class="skill-row1">
-          <img class="code-img" src="images/computer.png" alt="myskills" />
-          <h3>Design and Development</h3>
-          <p class="code-skill-desc">
-            I have been coding since past two years. I love making websites and
-            learning new things everyday.
-          </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Neupane - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Krishna Neupane</a>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#blog" class="nav-link">Blog</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="skill-row2">
-          <img class="teacher-img" src="images/teacher.png" alt="alt-skills" />
-          <h3>Teaching</h3>
-          <p class="teaching-skill-desc">
-            I have been teaching students since past 4 years. Nothing gives me
-            happiness more than sharing my kowledge.
-          </p>
-        </div>
-      </div>
-      <hr />
-      <div class="contact-me">
-        <h2>Get In Touch</h2>
-        <h3>I code sometimes for my clients.</h3>
-        <p class="contact-message">
-          Contact me if you have any project. I will get in touch with you ASAP
-          and we can work togther.
-        </p>
-        <a class="btn" href="mailto:npkrishnahere@email.com">CONTACT ME</a>
-      </div>
-    </div>
+    </header>
 
-    <div class="bottom-container">
-      <a class="footer-link" href="https://www.facebook.com/itskr1shna"
-        >Facebook</a
-      >
-      <a class="footer-link" href="https://twitter.com/">Twitter</a>
-      <a
-        class="footer-link"
-        href="https://www.youtube.com/channel/UCNfqfnZAExxrnH-QegOQscA"
-        >YouTube</a
-      >
-      <p class="copyright">© 2022 Krishna Neupane. All rights reserved.</p>
-    </div>
-  </body>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Krishna Neupane</h1>
+                <p>Web Developer & Educator passionate about teaching web technologies and sharing knowledge through writing.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#blog" class="btn btn-secondary">Read My Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I'm an educator with 2 years of teaching experience, specializing in web page development and computer networks. I have a strong foundation in core web technologies and I'm passionate about continuous learning. Currently expanding my skills in modern frameworks and backend development while sharing my knowledge through teaching and blog writing.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Core Web Technologies</h3>
+                    <p>HTML, CSS, JavaScript - Building solid foundations</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Teaching Expertise</h3>
+                    <p>Web Page Development, Computer Networks - 2+ years experience</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Currently Learning</h3>
+                    <p>Tailwind CSS, Backend Development, Modern Frameworks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <p>A collection of my recent work and personal projects.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/f0f0f0/666?text=Personal+Website" alt="Personal Website">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Website</h3>
+                        <p>A responsive personal website built with HTML, CSS, and JavaScript.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/f0f0f0/666?text=Student+Portal" alt="Student Portal">
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Portal</h3>
+                        <p>A web application for students to access course materials and assignments.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/f0f0f0/666?text=Network+Simulator" alt="Network Simulator">
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Simulator</h3>
+                        <p>An educational tool to demonstrate computer networking concepts.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Blog</h2>
+                <p>Thoughts, ideas, and insights about web development and teaching.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=HTML+Basics" alt="HTML Basics">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 15, 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Getting Started with HTML</h3>
+                        <p>A comprehensive guide to HTML fundamentals for beginners.</p>
+                        <a href="#" class="blog-link">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=CSS+Tips" alt="CSS Tips">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>June 22, 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>CSS Tips for Better Layouts</h3>
+                        <p>Essential CSS techniques every web developer should know.</p>
+                        <a href="#" class="blog-link">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=Teaching+Web+Dev" alt="Teaching Web Development">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>July 10, 2024</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Teaching Web Development Effectively</h3>
+                        <p>Best practices for teaching web development to students.</p>
+                        <a href="#" class="blog-link">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=JavaScript+Fundamentals" alt="JavaScript Fundamentals">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>August 5, 2024</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3>JavaScript Fundamentals</h3>
+                        <p>Understanding the core concepts of JavaScript programming.</p>
+                        <a href="#" class="blog-link">Read more</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Krishna Neupane. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
