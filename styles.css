@@ -88,6 +88,7 @@ body {
 .hero {
     padding: 120px 0 80px;
     text-align: center;
+    margin: 100px;
 }
 
 .hero-content h1 {
@@ -109,6 +110,7 @@ body {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    /* margin-top: 20px; */
 }
 
 .btn {
