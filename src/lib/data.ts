@@ -1,0 +1,75 @@
+export const projects = [
+  {
+    id: 1,
+    title: "EduTech Learning Platform",
+    description: "A comprehensive online learning platform with interactive courses, progress tracking, and collaborative features for modern education. Built with React, Node.js, and MongoDB.",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
+    status: "Live",
+    link: "#",
+    image: "/placeholder.svg",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Green Initiative Tracker",
+    description: "A web application helping organizations track their environmental impact and sustainability goals with real-time analytics and reporting features.",
+    tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
+    status: "In Development",
+    link: "#",
+    image: "/placeholder.svg",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description: "A modern, responsive portfolio website showcasing skills, projects, and blog content with dark/light theme support and smooth animations.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    status: "Live",
+    link: "#",
+    image: "/placeholder.svg",
+    featured: false,
+  }
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    slug: "art-of-teaching",
+    title: "The Art of Teaching in the Digital Age",
+    excerpt: "Exploring how technology transforms education and creates new opportunities for meaningful learning experiences.",
+    date: "Dec 15, 2024",
+    readTime: "5 min read",
+    category: "Education",
+    featured: true,
+  },
+  {
+    id: 2,
+    slug: "accessible-web-experiences",
+    title: "Building Accessible Web Experiences",
+    excerpt: "A comprehensive guide to creating inclusive digital spaces that work for everyone, with practical tips and real-world examples.",
+    date: "Dec 10, 2024",
+    readTime: "8 min read",
+    category: "Web Development",
+    featured: true,
+  },
+  {
+    id: 3,
+    slug: "power-of-storytelling",
+    title: "The Power of Storytelling in Content Creation",
+    excerpt: "How narrative techniques can transform dry content into engaging stories that resonate with your audience.",
+    date: "Dec 5, 2024",
+    readTime: "6 min read",
+    category: "Content Writing",
+    featured: false,
+  },
+  {
+    id: 4,
+    slug: "balancing-passions",
+    title: "Balancing Multiple Creative Passions",
+    excerpt: "Personal reflections on managing time and energy across teaching, development, and writing projects.",
+    date: "Nov 28, 2024",
+    readTime: "4 min read",
+    category: "Personal",
+    featured: false,
+  }
+];

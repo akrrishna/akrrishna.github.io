@@ -1,209 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Neupane - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="#home">Krishna </a>
-            </div>
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#blog" class="nav-link">Blog</a>
-            </nav>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna Neupane • Portfolio Website</title>
+    <meta name="description" content="Lovable Generated Project" />
+    <meta name="author" content="Lovable" />
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hello, I'm Krishna Neupane</h1>
-                <p>Web Developer & Educator passionate about teaching web technologies and sharing knowledge through writing.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#blog" class="btn btn-secondary">Read My Blog</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <meta property="og:title" content="Krishna Neupane • Portfolio Website" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>I'm an educator with 2 years of teaching experience, specializing in web page development and computer networks. I have a strong foundation in core web technologies and I'm passionate about continuous learning. Currently expanding my skills in modern frameworks and backend development while sharing my knowledge through teaching and blog writing.</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Core Web Technologies</h3>
-                    <p>HTML, CSS, JavaScript - Building solid foundations</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Teaching Expertise</h3>
-                    <p>Web Page Development, Computer Networks - 2+ years experience</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Currently Learning</h3>
-                    <p>Tailwind CSS, Backend Development, Modern Frameworks</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Projects</h2>
-                <p>A collection of my recent work and personal projects.</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/c2.png" alt="Personal Website">
-                    </div>
-                    <div class="project-content">
-                        <h3>Personal Website</h3>
-                        <p>A responsive personal website built with HTML, CSS, and JavaScript.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/akrrishna/old_portfolio" class="project-link" target="_blank">View Project →</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/g1.png" alt="GameFreak">
-                    </div>
-                    <div class="project-content">
-                        <h3>Gamefreak</h3>
-                        <p>A gaming store where you can browse and buy games</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/akrrishna/GameStore" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/f1.png" alt="Fitness App">
-                    </div>
-                    <div class="project-content">
-                        <h3>Fitness App</h3>
-                        <p>An android App to exercise according to your body type with step tracker</p>
-                        <div class="project-tags">
-                            <span class="tag">XML</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">PHP</span>
-                        </div>
-                        <a href="https://github.com/akrrishna/FitnessAppAndroid" target="_blank" class="project-link">View Project →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Blog</h2>
-                <p>Thoughts, ideas, and insights about web development and teaching.</p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=HTML+Basics" alt="HTML Basics">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>May 15, 2024</span>
-                            <span>5 min read</span>
-                        </div>
-                        <h3>Getting Started with HTML</h3>
-                        <p>A comprehensive guide to HTML fundamentals for beginners.</p>
-                        <a href="#" class="blog-link">Read more</a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=CSS+Tips" alt="CSS Tips">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>June 22, 2024</span>
-                            <span>7 min read</span>
-                        </div>
-                        <h3>CSS Tips for Better Layouts</h3>
-                        <p>Essential CSS techniques every web developer should know.</p>
-                        <a href="#" class="blog-link">Read more</a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=Teaching+Web+Dev" alt="Teaching Web Development">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>July 10, 2024</span>
-                            <span>8 min read</span>
-                        </div>
-                        <h3>Teaching Web Development Effectively</h3>
-                        <p>Best practices for teaching web development to students.</p>
-                        <a href="#" class="blog-link">Read more</a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://via.placeholder.com/400x200/f0f0f0/666?text=JavaScript+Fundamentals" alt="JavaScript Fundamentals">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>August 5, 2024</span>
-                            <span>6 min read</span>
-                        </div>
-                        <h3>JavaScript Fundamentals</h3>
-                        <p>Understanding the core concepts of JavaScript programming.</p>
-                        <a href="#" class="blog-link">Read more</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Krishna Neupane. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
