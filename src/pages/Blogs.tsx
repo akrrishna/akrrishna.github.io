@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useNavigate } from "react-router-dom";
-import { blogPosts } from "@/lib/data";
+import { allPosts } from "@/lib/posts";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -37,12 +37,12 @@ const Blogs = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="px-4 pb-16">
+      <section className="pb-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
+            {allPosts.map((post, index) => (
               <Card 
-                key={post.id} 
+                key={post.slug} 
                 className="blog-card animate-fade-in group cursor-pointer transition-all duration-300 hover:border-primary"
                 style={{ animationDelay: `${0.4 + index * 0.2}s` }}
                 onClick={() => navigate(`/blogs/${post.slug}`)}

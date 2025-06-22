@@ -4,16 +4,8 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { useParams, useNavigate } from "react-router-dom";
 import { Facebook, Twitter, Linkedin, Link, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useEffect, useState, lazy, Suspense } from "react";
-import { blogPosts } from "@/lib/data";
-
-// Helper to dynamically import MDX components
-const mdxComponents = {
-  "art-of-teaching": lazy(() => import("@/content/posts/art-of-teaching.mdx")),
-  "accessible-web-experiences": lazy(() => import("@/content/posts/accessible-web-experiences.mdx")),
-  "power-of-storytelling": lazy(() => import("@/content/posts/power-of-storytelling.mdx")),
-  "balancing-passions": lazy(() => import("@/content/posts/balancing-passions.mdx")),
-};
+import { useEffect, useState } from "react";
+import { getPostBySlug, allPosts } from "@/lib/posts";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -22,8 +14,8 @@ const BlogPost = () => {
   const [toc, setToc] = useState<{ id: string; level: number; text: string }[]>([]);
   const [activeId, setActiveId] = useState("");
 
-  const currentPost = blogPosts.find(post => post.slug === slug);
-  const MdxComponent = currentPost ? mdxComponents[currentPost.slug as keyof typeof mdxComponents] : null;
+  const currentPost = getPostBySlug(slug || "");
+  const MdxComponent = currentPost?.content;
 
   useEffect(() => {
     if (!MdxComponent) return;
@@ -88,8 +80,9 @@ const BlogPost = () => {
     );
   }
   
-  const nextPost = blogPosts.find(post => post.id === currentPost.id + 1);
-  const prevPost = blogPosts.find(post => post.id === currentPost.id - 1);
+  const currentIndex = allPosts.findIndex(post => post.slug === slug);
+  const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+  const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -163,13 +156,7 @@ const BlogPost = () => {
             <Card className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <CardContent className="p-8">
                 <div className="prose prose-lg max-w-none dark:prose-invert">
-                  <Suspense fallback={
-                    <div className="flex justify-center items-center py-12">
-                      <Loader2 className="h-8 w-8 animate-spin" />
-                    </div>
-                  }>
-                    <MdxComponent />
-                  </Suspense>
+                  <MdxComponent />
                 </div>
               </CardContent>
             </Card>

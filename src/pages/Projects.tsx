@@ -41,47 +41,66 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card 
-                key={project.id} 
-                className="blog-card animate-fade-in group cursor-pointer transition-all duration-300 hover:border-primary"
+              <div 
+                key={project.id}
+                className="group relative flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:border-primary overflow-hidden animate-fade-in"
                 style={{ animationDelay: `${0.4 + index * 0.2}s` }}
-                onClick={() => navigate(`/projects/${project.id}`)}
               >
-                <CardHeader>
-                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      project.status === 'Live' 
-                        ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' 
-                        : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300'
-                    }`}>
-                      {project.status}
-                    </span>
-                  </div>
-                  <CardTitle className="group-hover:text-primary transition-colors duration-300 text-xl">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription className="text-base">
-                    {project.description}
-                  </CardDescription>
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {project.tech.map((tech) => (
-                      <span 
-                        key={tech}
-                        className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium"
-                      >
-                        {tech}
+                {/* Project Image */}
+                <div className="relative h-56 w-full overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      e.currentTarget.src = '/placeholder.svg';
+                    }}
+                  />
+                </div>
+                
+                <div className="flex flex-col flex-grow p-6">
+                  <div className="flex-grow">
+                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        project.status === 'Live' 
+                          ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' 
+                          : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300'
+                      }`}>
+                        {project.status}
                       </span>
-                    ))}
+                    </div>
+                    <CardTitle className="group-hover:text-primary transition-colors duration-300 text-xl">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className="text-base mt-2 line-clamp-3">
+                      {project.description}
+                    </CardDescription>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
-                    <Button variant="ghost" size="sm" className="group-hover:bg-primary/10 transition-colors">
-                      View Project →
-                    </Button>
+                  
+                  <div>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {project.tech.map((tech) => (
+                        <span 
+                          key={tech}
+                          className="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-4">
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="group-hover:bg-primary/10 transition-colors -ml-4"
+                        onClick={() => window.open(project.link, '_blank')}
+                      >
+                        View Project →
+                      </Button>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>

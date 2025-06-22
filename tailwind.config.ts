@@ -148,5 +148,9 @@ export default {
 			}
 		}
 	},
-	plugins: [tailwindcssAnimate],
+	plugins: [
+		require("tailwindcss-animate"),
+		require("@tailwindcss/typography"),
+		require("@tailwindcss/line-clamp"),
+	],
 } satisfies Config;

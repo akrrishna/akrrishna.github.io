@@ -1,12 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { blogPosts } from "@/lib/data";
+import { featuredPosts } from "@/lib/posts";
 
 const FeaturedBlogs = () => {
   const navigate = useNavigate();
-  
-  const featuredPosts = blogPosts.filter(post => post.featured);
 
   return (
     <section className="py-16 px-4">
@@ -18,10 +16,10 @@ const FeaturedBlogs = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {featuredPosts.map((post, index) => (
             <Card 
-              key={post.id} 
+              key={post.slug} 
               className="blog-card animate-fade-in group cursor-pointer transition-all duration-300 hover:border-primary"
               style={{ animationDelay: `${0.4 + index * 0.2}s` }}
               onClick={() => navigate(`/blogs/${post.slug}`)}
