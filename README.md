@@ -92,7 +92,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Portfolio**: [npkrishna.com](https://npkrishna.com)
 - **GitHub**: [@akrrishna](https://github.com/akrrishna)
-- **LinkedIn**: [Krishna Neupane](https://linkedin.com/in/krishna-neupane)
+- **Facebook**: [Krishna Neupane](https://www.facebook.com/itskr1shna/)
 
 ---
 
