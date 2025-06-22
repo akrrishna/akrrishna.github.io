@@ -111,9 +111,9 @@ const Index = () => {
             © 2024 Krishna Neupane. 
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Facebook</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">GitHub</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Linkdln</a>
+            <a href="https://www.facebook.com/itskr1shna/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Facebook</a>
+            <a href="https://github.com/akrrishna" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">GitHub</a>
+            <a href="mailto:npkrishnahere@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">Email</a>
           </div>
         </div>
       </footer>

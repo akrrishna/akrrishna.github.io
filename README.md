@@ -36,13 +36,6 @@ This modern, responsive portfolio website showcasing skills, projects, and blog 
 - **Tech Stack**: React, TypeScript, Tailwind CSS, Vite
 - **Status**: Live
 
-## 📝 Featured Blog Posts
-
-- **The Art of Teaching in the Digital Age** - Exploring how technology transforms education
-- **Building Accessible Web Experiences** - A comprehensive guide to creating inclusive digital spaces
-- **The Power of Storytelling in Content Creation** - How narrative techniques transform content
-- **Balancing Multiple Creative Passions** - Managing time across teaching, development, and writing
-
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -52,51 +45,10 @@ This modern, responsive portfolio website showcasing skills, projects, and blog 
 - **shadcn/ui** - Beautiful, accessible components
 - **Vite** - Fast build tool and dev server
 
-### Backend & Tools
-- **Node.js** - Server-side JavaScript
-- **MongoDB** - NoSQL database
-- **PostgreSQL** - Relational database
-- **Express** - Web framework
-
 ### Development Tools
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
 - **Git** - Version control
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/akrrishna/akrrishna.github.io.git
-   cd akrrishna.github.io
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run deploy` - Deploy to GitHub Pages
 
 ## 📁 Project Structure
 
