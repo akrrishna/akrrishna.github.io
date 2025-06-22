@@ -19,23 +19,6 @@ Hi! I'm **Krishna Neupane** - a passionate **Teacher**, **Web Developer**, and *
 ### 🚀 Mission
 *"Code. Teach. Write. Repeat."*
 
-## 🌟 Featured Projects
-
-### EduTech Learning Platform
-A comprehensive online learning platform with interactive courses, progress tracking, and collaborative features for modern education.
-- **Tech Stack**: React, Node.js, MongoDB, Express
-- **Status**: Live
-
-### Green Initiative Tracker
-A web application helping organizations track their environmental impact and sustainability goals with real-time analytics.
-- **Tech Stack**: Vue.js, Express, PostgreSQL, Chart.js
-- **Status**: In Development
-
-### Portfolio Website
-This modern, responsive portfolio website showcasing skills, projects, and blog content with dark/light theme support.
-- **Tech Stack**: React, TypeScript, Tailwind CSS, Vite
-- **Status**: Live
-
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -107,7 +90,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Portfolio**: [akrrishna.github.io](https://akrrishna.github.io)
+- **Portfolio**: [npkrishna.com](https://npkrishna.com)
 - **GitHub**: [@akrrishna](https://github.com/akrrishna)
 - **LinkedIn**: [Krishna Neupane](https://linkedin.com/in/krishna-neupane)
 
