@@ -20,27 +20,48 @@ const BlogPost = () => {
   useEffect(() => {
     if (!MdxComponent) return;
     
-    // Function to build TOC from headings
+    // Function to build TOC from custom frontmatter or fallback to auto-generation
     const buildToc = () => {
-      const headings = document.querySelectorAll('.prose h2, .prose h3, .prose h4');
-      const tocItems: { id: string; level: number; text: string }[] = [];
-      headings.forEach((heading) => {
-        if (heading.id && heading.textContent) {
-          tocItems.push({
-            id: heading.id,
-            level: parseInt(heading.tagName.substring(1)),
-            text: heading.textContent,
-          });
-        }
-      });
-      setToc(tocItems);
+      // Check if custom TOC is defined in frontmatter
+      if (currentPost?.tableOfContents && currentPost.tableOfContents.length > 0) {
+        const headings = document.querySelectorAll('.prose h2');
+        const tocItems: { id: string; level: number; text: string }[] = [];
+        
+        // Use custom TOC from frontmatter
+        currentPost.tableOfContents.forEach((sectionTitle: string) => {
+          const heading = Array.from(headings).find(h => h.textContent === sectionTitle);
+          if (heading && heading.id) {
+            tocItems.push({
+              id: heading.id,
+              level: 2,
+              text: sectionTitle,
+            });
+          }
+        });
+        
+        setToc(tocItems);
+      } else {
+        // Fallback to auto-generation for posts without custom TOC
+        const headings = document.querySelectorAll('.prose h2');
+        const tocItems: { id: string; level: number; text: string }[] = [];
+        headings.forEach((heading) => {
+          if (heading.id && heading.textContent) {
+            tocItems.push({
+              id: heading.id,
+              level: parseInt(heading.tagName.substring(1)),
+              text: heading.textContent,
+            });
+          }
+        });
+        setToc(tocItems);
+      }
     };
 
     // Build TOC after the component has rendered
     const timeoutId = setTimeout(buildToc, 100);
 
     return () => clearTimeout(timeoutId);
-  }, [MdxComponent]);
+  }, [MdxComponent, currentPost]);
 
   useEffect(() => {
     if (toc.length === 0) return;
@@ -106,17 +127,18 @@ const BlogPost = () => {
           {/* Table of Contents */}
           <aside className="hidden md:block w-1/5 sticky top-24 self-start">
             <div className="p-4 bg-muted/30 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4">Table of Contents</h3>
+              <h3 className="text-lg font-semibold mb-3">Table of Contents</h3>
               <ul className="space-y-2">
                 {toc.map((item) => (
-                  <li key={item.id}>
+                  <li key={item.id} className="truncate">
                     <a 
                       href={`#${item.id}`} 
-                      className={`transition-colors ${
+                      className={`block transition-colors text-sm leading-relaxed py-1 ${
                         activeId === item.id 
                           ? 'text-primary font-semibold' 
                           : 'text-muted-foreground hover:text-primary'
                       }`}
+                      title={item.text}
                     >
                       {item.text}
                     </a>

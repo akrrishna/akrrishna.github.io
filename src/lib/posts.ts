@@ -10,6 +10,7 @@ export interface BlogPost {
   featured: boolean
   readTime: string
   content: React.ComponentType // The MDX component
+  tableOfContents?: string[] // Optional custom table of contents
 }
 
 interface MDXModule {
@@ -20,6 +21,7 @@ interface MDXModule {
     category?: string
     featured?: boolean
     readTime?: string
+    tableOfContents?: string[]
   }
   default: React.ComponentType
 }
@@ -35,7 +37,8 @@ export const allPosts: BlogPost[] = Object.entries(posts).map(([path, post]: [st
     category: post.frontmatter?.category || 'General',
     featured: post.frontmatter?.featured || false,
     readTime: post.frontmatter?.readTime || '5 min read',
-    content: post.default // The actual MDX component
+    content: post.default, // The actual MDX component
+    tableOfContents: post.frontmatter?.tableOfContents || undefined
   }
 }).sort((a, b) => {
   const dateA = new Date(a.date).getTime()

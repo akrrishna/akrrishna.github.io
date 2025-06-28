@@ -43,11 +43,11 @@ const Blogs = () => {
             {allPosts.map((post, index) => (
               <Card 
                 key={post.slug} 
-                className="blog-card animate-fade-in group cursor-pointer transition-all duration-300 hover:border-primary"
+                className="blog-card animate-fade-in group cursor-pointer transition-all duration-300 hover:border-primary flex flex-col"
                 style={{ animationDelay: `${0.4 + index * 0.2}s` }}
                 onClick={() => navigate(`/blogs/${post.slug}`)}
               >
-                <CardHeader>
+                <CardHeader className="flex-grow">
                   <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       post.featured 
