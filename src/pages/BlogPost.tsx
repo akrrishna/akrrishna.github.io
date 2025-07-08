@@ -6,6 +6,7 @@ import { Facebook, Twitter, Linkedin, Link, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useEffect, useState } from "react";
 import { getPostBySlug, allPosts } from "@/lib/posts";
+import { Helmet } from 'react-helmet-async';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -107,6 +108,15 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{currentPost.title} | Krishna Neupane</title>
+        <meta name="description" content={currentPost.excerpt} />
+        <meta property="og:title" content={currentPost.title} />
+        <meta property="og:description" content={currentPost.excerpt} />
+        {/* Optionally add og:image if you have a cover image in frontmatter */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
       {/* Header */}
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-6xl mx-auto px-4 py-4">
