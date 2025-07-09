@@ -83,6 +83,8 @@ readTime: "5 min read"
 - Makes it available on the blog pages
 - Sorts posts by date (newest first)
 
+**⚠️ Important**: After adding a new blog post, you must manually update `public/sitemap.xml` to include the new post URL for better SEO.
+
 ### How to Edit a Blog Post
 
 Simply edit the `.mdx` file directly. You can modify:
@@ -212,4 +214,5 @@ src/
 - [ ] Write your blog content
 - [ ] Test the post appears on `/blogs` page
 - [ ] Test the individual post page works
-- [ ] Set `featured: true` if you want it on homepage 
+- [ ] Set `featured: true` if you want it on homepage
+- [ ] **Update `public/sitemap.xml`** with the new blog post URL and date 
