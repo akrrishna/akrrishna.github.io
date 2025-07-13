@@ -132,8 +132,8 @@ const BlogPost = () => {
       </header>
 
       {/* Article Content */}
-      <article className="py-16 px-4">
-        <div className="max-w-7xl flex gap-12">
+      <article className="py-16 px-2 md:px-4">
+        <div className="max-w-7xl mx-auto flex gap-12">
           {/* Table of Contents */}
           <aside className="hidden md:block w-1/5 sticky top-24 self-start">
             <div className="p-4 bg-muted/30 rounded-lg">
@@ -186,7 +186,7 @@ const BlogPost = () => {
 
             {/* Article Body */}
             <Card className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <CardContent className="p-8">
+              <CardContent className="p-4 md:p-8">
                 <div className="prose prose-lg max-w-none dark:prose-invert">
                   <MdxComponent />
                 </div>
