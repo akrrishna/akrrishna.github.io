@@ -16,7 +16,7 @@ const Projects = () => {
             <Button variant="ghost" asChild>
               <a href="/" className="text-lg font-semibold">← Back to Portfolio</a>
             </Button>
-            <h1 className="text-2xl font-bold">All Projects</h1>
+            <div></div>
             <div className="flex items-center">
               <ThemeToggle />
             </div>
