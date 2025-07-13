@@ -49,11 +49,11 @@ const Index = () => {
                   I am <span className="text-primary">Krishna</span>
                 </h1>
                 <div className="text-xl md:text-2xl text-muted-foreground space-y-2">
-                  <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
+                  <div className="animate-fade-in whitespace-nowrap" style={{ animationDelay: '1s' }}>
                     <span className="inline-block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Teacher</span>
-                    <span className="mx-4">•</span>
+                    <span className="mx-2 md:mx-4">•</span>
                     <span className="inline-block bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent animate-pulse">Web Developer</span>
-                    <span className="mx-4">•</span>
+                    <span className="mx-2 md:mx-4">•</span>
                     <span className="inline-block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Content Writer</span>
                   </div>
                 </div>
