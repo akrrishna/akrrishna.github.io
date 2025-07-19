@@ -85,6 +85,8 @@ readTime: "5 min read"
 
 **⚠️ Important**: After adding a new blog post, you must manually update `public/sitemap.xml` to include the new post URL for better SEO.
 
+**✅ Social Media Sharing**: Static HTML files are automatically generated for each blog post during the build process. This ensures proper Open Graph meta tags for social media sharing on platforms like Facebook and Twitter.
+
 ### How to Edit a Blog Post
 
 Simply edit the `.mdx` file directly. You can modify:
@@ -215,4 +217,5 @@ src/
 - [ ] Test the post appears on `/blogs` page
 - [ ] Test the individual post page works
 - [ ] Set `featured: true` if you want it on homepage
-- [ ] **Update `public/sitemap.xml`** with the new blog post URL and date 
+- [ ] **Update `public/sitemap.xml`** with the new blog post URL and date
+- [ ] **Push to GitHub** - GitHub Actions will automatically build and deploy with proper social media meta tags 

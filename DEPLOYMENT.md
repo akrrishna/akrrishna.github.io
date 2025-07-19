@@ -35,7 +35,8 @@ git push origin main
 ### 4. Automatic Deployment
 
 Once you push to the `main` branch, GitHub Actions will automatically:
-- Build your project
+- Build your project with Vite
+- Generate static HTML files for each blog post (for social media sharing)
 - Deploy it to GitHub Pages
 - Make it available at your custom domain
 
@@ -50,8 +51,16 @@ The `public/CNAME` file contains your custom domain. This file will be copied to
 ### GitHub Actions Workflow
 The `.github/workflows/deploy.yml` file handles:
 - Building your Vite project
+- Generating static HTML files for each blog post with proper Open Graph meta tags
 - Uploading the built files
 - Deploying to GitHub Pages
+
+### Social Media Sharing
+Each blog post automatically gets a static HTML file at `/blogs/[slug]/index.html` with:
+- Proper Open Graph meta tags (title, description, image)
+- Twitter Card meta tags
+- Article-specific metadata
+- SEO-friendly content for social media crawlers
 
 ## Troubleshooting
 
