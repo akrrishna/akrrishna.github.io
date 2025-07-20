@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Read the base HTML template
-const baseHtmlPath = path.join(__dirname, '../index.html');
+const baseHtmlPath = path.join(__dirname, '../dist/index.html');
 const baseHtml = fs.readFileSync(baseHtmlPath, 'utf-8');
 
 // Read all MDX files from content/posts
